@@ -1,0 +1,57 @@
+{
+  "$id": "Global",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Address": {
+      "$id": "Address",
+      "additionalProperties": false,
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "id": {
+          "$format": "uuid",
+          "type": "string"
+        },
+        "line1": {
+          "type": "string"
+        },
+        "postcode": {
+          "$maxLength": 4,
+          "$minLength": 4,
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        }
+      },
+      "required": ["id", "line1", "city", "state", "postcode", "country"],
+      "type": "object"
+    },
+    "Error": {
+      "$id": "Agent",
+      "additionalProperties": false,
+      "properties": {
+        "address": {
+          "$ref": "#/definitions/Address"
+        }
+      },
+      "required": ["address"],
+      "type": "object"
+    },
+    "Works": {
+      "$id": "Agent",
+      "additionalProperties": false,
+      "properties": {
+        "address": {
+          "$ref": "Global#/definitions/Address"
+        }
+      },
+      "required": ["address"],
+      "type": "object"
+    }
+  }
+}
