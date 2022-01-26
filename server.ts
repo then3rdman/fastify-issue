@@ -13,7 +13,7 @@ server.get("/", {
   schema: {
     body: {
       type: "array",
-      items: { $ref: "Global#/definitions/Works" },
+      items: { $ref: "Global#/definitions/Error" },
     },
   },
 });

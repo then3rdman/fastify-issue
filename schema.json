@@ -32,7 +32,7 @@
       "type": "object"
     },
     "Error": {
-      "$id": "Agent",
+      "$id": "Error",
       "additionalProperties": false,
       "properties": {
         "address": {
@@ -43,7 +43,7 @@
       "type": "object"
     },
     "Works": {
-      "$id": "Agent",
+      "$id": "Works",
       "additionalProperties": false,
       "properties": {
         "address": {
